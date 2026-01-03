@@ -28,11 +28,11 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617] mt-[-100px]"
     >
       {/* --- Background Layer --- */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 opacity-60"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-100 opacity-60"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
