@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
         {/* Updated Header */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-6xl lg:text-[5.6rem] font-black text-white leading-[0.95] tracking-tighter mb-10"
+          className="text-6xl md:text-5xl lg:text-[5.6rem] font-black text-white leading-[0.95] tracking-tighter mb-10"
         >
           Bringing the Power of <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-600">
