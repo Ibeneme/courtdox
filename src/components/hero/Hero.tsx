@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617] mt-[-100px]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617] md:mt-[-100px] mt-[0px]"
     >
       {/* --- Background Layer --- */}
       <div
