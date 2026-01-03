@@ -11,6 +11,15 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const [activeItem, setActiveItem] = useState("Home");
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
+
   useEffect(() => {
     const pathMap: { [key: string]: string } = {
       "/": "Home",
@@ -72,7 +81,6 @@ const Navbar: React.FC = () => {
                   }`}
                 >
                   {item.name}
-                  {/* Underline Indicator */}
                   {activeItem === item.name && (
                     <motion.div
                       layoutId="navUnderline"
@@ -84,7 +92,6 @@ const Navbar: React.FC = () => {
 
               <div className="h-6 w-px bg-slate-100 mx-4" />
 
-              {/* Portal & Booking Actions */}
               <div className="flex items-center gap-4">
                 <a
                   href="https://www.lawmatics.com/"
@@ -92,8 +99,7 @@ const Navbar: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 text-[11px] font-black text-slate-400 hover:text-blue-600 uppercase tracking-widest transition-colors"
                 >
-                  Portal
-                  <ExternalLink size={12} />
+                  Portal <ExternalLink size={12} />
                 </a>
 
                 <Link
@@ -121,17 +127,17 @@ const Navbar: React.FC = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="fixed inset-0 top-[88px] z-50 lg:hidden bg-white px-6 py-12"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="fixed inset-x-0 top-[88px] z-50 lg:hidden bg-white border-t border-slate-50 overflow-y-auto h-[calc(100vh-88px)] px-6 py-12 pb-24"
             >
               <div className="flex flex-col space-y-1">
                 {navItems.map((item, idx) => (
                   <motion.div
                     key={item.name}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.05 }}
                   >
                     <Link
@@ -160,13 +166,13 @@ const Navbar: React.FC = () => {
                   <Link
                     to="/booking"
                     onClick={() => setIsOpen(false)}
-                    className="block w-full bg-blue-600 text-white text-center py-6 rounded-[2rem] font-black uppercase tracking-widest text-sm"
+                    className="block w-full bg-blue-600 text-white text-center py-6 rounded-[2rem] font-black uppercase tracking-widest text-sm active:scale-[0.98] transition-transform"
                   >
                     Book now
                   </Link>
                   <a
                     href="https://www.lawmatics.com/"
-                    className="block w-full bg-slate-50 text-slate-950 text-center py-6 rounded-[2rem] font-black uppercase tracking-widest text-sm"
+                    className="block w-full bg-slate-50 text-slate-950 text-center py-6 rounded-[2rem] font-black uppercase tracking-widest text-sm active:scale-[0.98] transition-transform"
                   >
                     Portal login
                   </a>
@@ -177,12 +183,8 @@ const Navbar: React.FC = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Dynamic Spacer */}
-      <div
-        className={scrolled ? "h-[88px]" : "h-[104px]"}
-        transition-all
-        duration-500
-      />
+      {/* Spacer for fixed navbar */}
+      <div className={scrolled ? "h-[88px]" : "h-[104px]"} />
     </>
   );
 };
