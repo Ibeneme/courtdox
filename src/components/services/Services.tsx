@@ -8,7 +8,7 @@ const Services: React.FC = () => {
   const services = [
     {
       title: "Basic Document Preparation",
-      price: "$299",
+      price: "$399",
       description:
         "CourtDox will provide you with Demand Letter, Petition, Answer, Cease & Desist, Discovery (Out), Jury Instructions, Findings of Fact and Conclusions of Law for your lawsuit along with instructions on how to use them.",
       icon: <Scale className="w-8 h-8" />,

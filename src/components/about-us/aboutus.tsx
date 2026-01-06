@@ -27,7 +27,8 @@ const AboutUs: React.FC = () => {
   const values = [
     {
       title: "Lawyer-Led Design",
-      desc: "Built by practicing attorneys who understand the nuance of the bench.",
+      // UPDATED COPY BELOW
+      desc: "Built by practicing attorneys who understand the nuances of getting to trial.",
       icon: <Scale className="w-6 h-6" />,
     },
     {
@@ -106,7 +107,6 @@ const AboutUs: React.FC = () => {
                   className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000"
                 />
               </div>
-              {/* Abstract decorative element */}
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600 rounded-full blur-[80px] opacity-20 -z-0" />
             </motion.div>
           </div>
@@ -132,6 +132,7 @@ const AboutUs: React.FC = () => {
                 <div className="h-2 w-24 bg-slate-950 rounded-full" />
               </div>
 
+              {/* UPDATED COPY BELOW */}
               <p className="text-2xl text-slate-600 leading-relaxed font-bold">
                 Access to justice shouldn't be a luxury. CourtDox is
                 democratizing the courtroom by making professional litigation
@@ -143,7 +144,7 @@ const AboutUs: React.FC = () => {
                 {[
                   "Human Review Safeguards",
                   "Professional Case Formatting",
-                  "Built-in Case Discovery",
+                  "Customized Discovery", // UPDATED COPY
                   "Clear, Step-by-Step Instructions",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-4 group">
@@ -170,7 +171,7 @@ const AboutUs: React.FC = () => {
                     {val.icon}
                   </div>
                   <div>
-                    <h4 className="font-black text-lg mb-2  tracking-tight tracking-tighter ">
+                    <h4 className="font-black text-lg mb-2  tracking-tight ">
                       {val.title}
                     </h4>
                     <p className="text-sm text-slate-500 font-bold leading-relaxed">
@@ -183,7 +184,6 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
       </section>
-
 
       {/* --- SECTION 4: FOOTER NOTE --- */}
       <div className="py-12 border-t border-slate-100 text-center">

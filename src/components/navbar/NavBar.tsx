@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                 <img
                   src={courtdox}
                   alt="Courtdox"
-                  className="h-10 lg:h-12 w-auto transition-all duration-500 group-hover:brightness-110"
+                  className="h-16 lg:h-20 w-auto transition-all duration-500 group-hover:brightness-110"
                 />
               </Link>
             </div>

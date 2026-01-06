@@ -14,7 +14,7 @@ import { useAppNavigation } from "../../hooks/useAppNavigation";
 
 const WhoWeAreContact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { goToBooking } = useAppNavigation(); // Navigation Hook
+  const { goToBooking } = useAppNavigation();
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -32,7 +32,6 @@ const WhoWeAreContact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    // Add your form submission logic here
   };
 
   return (
@@ -72,15 +71,14 @@ const WhoWeAreContact: React.FC = () => {
                 control of their lawsuits—whether filing a claim or defending
                 one.
               </p>
+              {/* UPDATED COPY BELOW */}
               <p>
                 At the heart of our platform is{" "}
                 <span className="text-blue-600 font-bold">CaseCreate</span>, a
-                proprietary set of AI algorithms designed by experienced
-                attorneys to draft precise, court-ready legal documents tailored
-                to your situation.
+                world’s first solution for efficiently drafting and automating
+                pleadings and documents for various stages of litigation.
               </p>
 
-              {/* --- Call to Action Button Integrated --- */}
               <motion.div variants={itemVariants} className="pt-4">
                 <button
                   onClick={goToBooking}
@@ -103,8 +101,9 @@ const WhoWeAreContact: React.FC = () => {
                   <CheckCircle size={16} />
                 </div>
               </div>
+              {/* REMOVED CLIENT COUNT TEXT */}
               <p className="text-sm font-bold text-gray-900 italic">
-                Trusted by 500+ clients across the justice system.
+                Empowering your legal journey with precision.
               </p>
             </motion.div>
           </motion.div>

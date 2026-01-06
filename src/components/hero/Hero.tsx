@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
           <div className="inline-flex items-center gap-3 bg-blue-500/5 backdrop-blur-xl border border-blue-500/20 px-5 py-2 rounded-full shadow-2xl">
             <Activity size={14} className="text-blue-400 animate-pulse" />
             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-100">
-              Next-Gen Litigation Support
+              Next-Gen Litigation
             </span>
           </div>
         </motion.div>
@@ -83,7 +83,6 @@ const Hero: React.FC = () => {
 
         {/* Matched Description */}
 
-
         {/* CTA Section */}
         <motion.div
           variants={itemVariants}
@@ -94,7 +93,7 @@ const Hero: React.FC = () => {
             className="group relative bg-blue-600 text-white px-12 py-6 rounded-2xl font-black uppercase tracking-widest overflow-hidden transition-all hover:bg-blue-500 active:scale-95 shadow-[0_20px_50px_rgba(37,99,235,0.3)]"
           >
             <span className="relative z-10 flex items-center gap-3">
-              Book a Demo{" "}
+              Send Us a Message
               <ChevronRight
                 size={20}
                 className="group-hover:translate-x-1 transition-transform"
@@ -120,8 +119,6 @@ const Hero: React.FC = () => {
       {/* Decorative Blur Glows */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
-
-
     </section>
   );
 };

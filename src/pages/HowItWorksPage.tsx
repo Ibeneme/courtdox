@@ -88,7 +88,7 @@ const HowItWorksPage: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Step 2 */}
+            {/* Step 2 - UPDATED COPY */}
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start group"
@@ -109,8 +109,8 @@ const HowItWorksPage: React.FC = () => {
                 <p className="text-xl text-slate-500 font-bold leading-relaxed mb-8 max-w-3xl">
                   Fill out our intake form. A CourtDox representative will call
                   at your scheduled time to conduct a detailed interview
-                  regarding your witnesses, evidence, and timeline. Precision
-                  here ensures a stronger filing.
+                  regarding your case including goals, witnesses, evidence, and
+                  events. Precision here ensures stronger documents for filing.
                 </p>
               </div>
             </motion.div>
@@ -152,7 +152,7 @@ const HowItWorksPage: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Step 4 */}
+            {/* Step 4 - UPDATED COPY */}
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start group"
@@ -171,15 +171,15 @@ const HowItWorksPage: React.FC = () => {
                 </h3>
                 <p className="text-xl text-slate-500 font-bold leading-relaxed mb-12 max-w-3xl">
                   Request consultation-only support from our network. Our
-                  professionals review the documents you provide to ensure they
-                  meet your specific goals.
+                  network of para-professionals and attorneys review the
+                  documents you provide to ensure they meet your specific goals.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
                   <div className="p-8 bg-slate-50 rounded-3xl border border-slate-100 group/card hover:border-blue-200 transition-all">
                     <UserCheck className="text-blue-600 mb-6" size={32} />
                     <h4 className="text-xl font-black text-slate-950 mb-4 tracking-tight">
-                      Paralegal Review
+                      Para-Professional Review
                     </h4>
                     <p className="text-slate-500 font-bold text-sm leading-relaxed">
                       We focus on formatting and clarity, citing directly to
@@ -204,7 +204,7 @@ const HowItWorksPage: React.FC = () => {
         </div>
       </section>
 
-      {/* --- Professional Detail Section (The Highlight Cards) --- */}
+      {/* --- Professional Detail Section --- */}
       <section className="py-24 bg-[#050b1a] text-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
@@ -218,7 +218,7 @@ const HowItWorksPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Paralegal Card */}
+            {/* Paralegal Card - REMOVED Evidence Mapping */}
             <motion.div
               whileHover={{ y: -10 }}
               className="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] flex flex-col transition-all"
@@ -238,13 +238,10 @@ const HowItWorksPage: React.FC = () => {
                 <div className="flex items-center gap-3">
                   <CheckCircle size={16} /> Formatting & Clarity
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle size={16} /> Evidence Mapping
-                </div>
               </div>
             </motion.div>
 
-            {/* Attorney Card */}
+            {/* Attorney Card - UPDATED Research Copy, REMOVED Content/Strategy */}
             <motion.div
               whileHover={{ y: -10 }}
               className="bg-blue-600 p-10 rounded-[2.5rem] flex flex-col shadow-2xl shadow-blue-600/20 transition-all"
@@ -265,10 +262,8 @@ const HowItWorksPage: React.FC = () => {
               </p>
               <div className="space-y-3 pt-6 border-t border-white/20 font-bold text-sm text-white uppercase tracking-widest">
                 <div className="flex items-center gap-3">
-                  <ShieldCheck size={16} /> Substantive Law Research
-                </div>
-                <div className="flex items-center gap-3">
-                  <ShieldCheck size={16} /> Content & Strategy Edits
+                  <ShieldCheck size={16} /> Substantive Legal Research and
+                  citation to case law
                 </div>
               </div>
             </motion.div>

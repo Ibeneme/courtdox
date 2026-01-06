@@ -105,8 +105,9 @@ const ServicesPage: React.FC = () => {
                 className="rounded-[3.5rem] shadow-2xl object-cover h-[500px] w-full border-8 border-white"
               />
               <div className="absolute -bottom-8 -left-8 bg-blue-600 text-white p-10 rounded-3xl hidden md:block shadow-2xl">
+                {/* UPDATED PRICE */}
                 <p className="font-black text-4xl mb-1 tracking-tighter">
-                  $499
+                  $399
                 </p>
                 <p className="text-[10px] uppercase tracking-[0.3em] font-black opacity-80">
                   Flat Rate Standard
@@ -174,7 +175,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* --- SECTION 2: PROFESSIONAL REVIEW (CLEAN & BOLD) --- */}
+      {/* --- SECTION 2: PROFESSIONAL REVIEW --- */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-24">
@@ -224,7 +225,7 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Attorney */}
+            {/* Attorney - UPDATED COPY */}
             <div className="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 flex flex-col hover:border-blue-200 transition-all">
               <div className="w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-slate-200">
                 <Scale size={32} />
@@ -235,7 +236,7 @@ const ServicesPage: React.FC = () => {
               <ul className="space-y-6 flex-grow">
                 {[
                   "Jurisdiction-specific legal research (No AI-generated content)",
-                  "Substantive edits for legal accuracy and strategic impact",
+                  "Substantive edits for legal accuracy",
                   "Citation of applicable case law and local statutes",
                 ].map((item) => (
                   <li
@@ -267,13 +268,13 @@ const ServicesPage: React.FC = () => {
       <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Basic Card */}
+            {/* Basic Card - UPDATED PRICE */}
             <div className="bg-white rounded-[3rem] p-12 text-gray-900 flex flex-col shadow-2xl">
               <h4 className="text-xs font-black uppercase tracking-[0.3em] mb-4 text-blue-600">
                 Standard
               </h4>
               <div className="text-6xl font-black mb-8 tracking-tighter">
-                $499
+                $399
               </div>
               <p className="text-sm font-bold text-gray-500 mb-10 leading-relaxed flex-grow">
                 Full standard litigation suite including Petition, Answer,

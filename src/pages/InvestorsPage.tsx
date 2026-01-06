@@ -21,17 +21,17 @@ const InvestorPage: React.FC = () => {
   const { goToBooking } = useAppNavigation();
 
   const fadeIn: Variants = {
-    hidden: { 
-      opacity: 0, 
-      y: 30 
+    hidden: {
+      opacity: 0,
+      y: 30,
     },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" // TS now knows this is a valid Transition ease
-      } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
     },
   };
 
@@ -45,11 +45,9 @@ const InvestorPage: React.FC = () => {
 
   return (
     <div className="bg-white text-slate-900 selection:bg-blue-100">
-      {/* --- HERO: THE VISION --- */}
+      {/* --- HERO --- */}
       <section className="relative pt-32 pb-40 bg-[#0B1120] text-white overflow-hidden">
-        {/* Animated Background Gradients */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] -mr-48 -mt-48 animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] -ml-24 -mb-24" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
@@ -75,9 +73,10 @@ const InvestorPage: React.FC = () => {
               </span>
             </h1>
 
+            {/* REMOVED "high-margin" */}
             <p className="text-xl md:text-2xl text-slate-400 leading-relaxed mb-12 max-w-2xl font-medium">
-              CourtDox is a high-margin LegalTech platform enabling individuals
-              and attorneys to effectively pursue legal claims at a fraction of
+              CourtDox is a LegalTech platform enabling individuals and
+              attorneys to effectively pursue legal claims at a fraction of
               traditional costs.
             </p>
 
@@ -103,7 +102,7 @@ const InvestorPage: React.FC = () => {
         </div>
       </section>
 
-      {/* --- SECTION 2: THE ECOSYSTEM (Lighter Interface) --- */}
+      {/* --- SECTION 2: THE ECOSYSTEM --- */}
       <section className="py-24 -mt-20 relative z-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -121,13 +120,13 @@ const InvestorPage: React.FC = () => {
               },
               {
                 icon: <Cpu size={32} />,
-                title: "Intelligent Gen",
-                desc: "CaseCreate™ AI drafts petitions, motions, and discovery tailored to specific state jurisdictions.",
+                title: "CaseCreate™ AI", // UPDATED
+                desc: "CaseCreate AI drafts petitions, motions, discovery, and more tailored to individual matters.",
               },
               {
                 icon: <Globe size={32} />,
-                title: "Filing Power",
-                desc: "A streamlined portal that empowers users to navigate the courthouse without attorney overhead.",
+                title: "Step-by-Step Instructions", // UPDATED
+                desc: "We empower users to understand and file their case—even if they’ve never set foot in a courthouse.",
               },
             ].map((card, i) => (
               <motion.div
@@ -150,7 +149,7 @@ const InvestorPage: React.FC = () => {
         </div>
       </section>
 
-      {/* --- SECTION 3: MARKET ANALYSIS (High Impact Slate) --- */}
+      {/* --- SECTION 3: MARKET ANALYSIS (EXPANDED DATA) --- */}
       <section className="py-32 bg-slate-900 text-white rounded-[4rem] mx-4 lg:mx-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
@@ -159,8 +158,9 @@ const InvestorPage: React.FC = () => {
                 Market Snapshot.
               </h2>
               <p className="text-slate-400 text-lg font-medium">
-                Middle-income households are ignored by big law. We provide the
-                bridge.
+                The current legal system serves only those at the extreme ends
+                of the spectrum. CourtDox captures the massive middle-market of
+                $145B currently priced out of justice.
               </p>
             </div>
             <div className="flex items-center gap-4 bg-white/5 border border-white/10 px-6 py-3 rounded-full">
@@ -173,10 +173,10 @@ const InvestorPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-20">
             {[
-              { val: "$88B", label: "Consumer Facing" },
-              { val: "$45B", label: "Latent (Unmet) Demand" },
-              { val: "50%", label: "HH Legal Exposure" },
-              { val: "$900", label: "Avg. Transaction" },
+              { val: "$145B", label: "Total Addressable Market" }, // UPDATED
+              { val: "$45B+", label: "Latent Demand Segment" }, // UPDATED
+              { val: "77%", label: "US Households with Unmet Legal Needs" }, // UPDATED
+              { val: "$399", label: "CourtDox Starting Rate" }, // UPDATED
             ].map((stat, i) => (
               <div key={i} className="group">
                 <p className="text-5xl font-black mb-3 group-hover:text-blue-400 transition-colors tracking-tighter">
@@ -196,23 +196,25 @@ const InvestorPage: React.FC = () => {
                 <BarChart3 className="text-blue-400" /> Latent Market Insight
               </h4>
               <p className="text-slate-300 text-lg font-medium leading-relaxed">
-                26% of middle-income households do nothing about legal issues
-                due to cost. We convert "inaction" into "revenue" through
-                cost-efficient tech.
+                The "Latent Market" for legal services refers to those with real
+                legal problems who take no action due to prohibitive costs. In
+                the US, nearly 80% of middle-income legal issues go unaddressed.
+                CourtDox converts this massive segment of "inaction" into active
+                revenue.
               </p>
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-4 p-6 bg-white/5 rounded-3xl border border-white/10">
                   <Target className="text-blue-400 shrink-0" size={24} />
                   <p className="text-sm font-medium text-slate-400">
-                    Consumers actively seeking affordable, accessible, and
-                    trustworthy alternatives to high-cost firms.
+                    Targeting $45B in dormant litigation value from individual
+                    and small business claimants.
                   </p>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-white/5 rounded-3xl border border-white/10">
                   <Zap className="text-blue-400 shrink-0" size={24} />
                   <p className="text-sm font-medium text-slate-400">
-                    AI-driven generation allows for massive volume without
-                    traditional attorney overhead scaling.
+                    Scaling through technology to handle 10x the volume of a
+                    traditional boutique law firm.
                   </p>
                 </div>
               </div>
@@ -240,7 +242,7 @@ const InvestorPage: React.FC = () => {
         </div>
       </section>
 
-      {/* --- SECTION 4: PARTNERSHIP STRATEGY (Clean, Editorial) --- */}
+      {/* --- SECTION 4: PARTNERSHIP STRATEGY --- */}
       <section className="py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-24 items-start">
@@ -256,13 +258,12 @@ const InvestorPage: React.FC = () => {
               </h2>
               <div className="space-y-8 text-slate-600 text-lg font-medium leading-relaxed">
                 <p>
-                  We are not looking to engage in multiple rounds of investment
-                  with dilution of equity at each stage. We seek a partner who
-                  understands the{" "}
+                  We seek partners who understand the{" "}
                   <span className="text-blue-600 font-black ">
                     Sustainable Scale
                   </span>{" "}
-                  model.
+                  model. We are not looking for hyper-dilution; we are looking
+                  for alignment.
                 </p>
                 <div className="p-8 bg-slate-50 rounded-[2.5rem] border-l-8 border-blue-600">
                   <p className=" text-slate-900">
@@ -272,8 +273,8 @@ const InvestorPage: React.FC = () => {
                 </div>
                 <p>
                   Capital commitment should be accessible on an as-needed and
-                  investor-approved basis, specifically to support expansion,
-                  aggressive marketing, and key channel partnerships.
+                  investor-approved basis, specifically to support expansion and
+                  key channel partnerships.
                 </p>
               </div>
             </div>
@@ -318,7 +319,7 @@ const InvestorPage: React.FC = () => {
         </div>
       </section>
 
-      {/* --- FINAL CALL TO ACTION --- */}
+      {/* --- FINAL CALL TO ACTION (CENTERED) --- */}
       <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl lg:text-6xl font-black mb-8  tracking-tighter">
@@ -328,7 +329,8 @@ const InvestorPage: React.FC = () => {
             Join us in building a profitable, high-impact platform serving
             nationwide.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* CENTERED SINGLE BUTTON */}
+          <div className="flex justify-center">
             <button
               onClick={() =>
                 (window.location.href = "mailto:investors@courtdox.com")
@@ -337,18 +339,11 @@ const InvestorPage: React.FC = () => {
             >
               Contact Investor Relations
             </button>
-            <button
-              onClick={goToBooking}
-              className="bg-white text-blue-600 px-12 py-6 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-blue-50 transition-all shadow-xl"
-            >
-              Schedule Briefing
-            </button>
           </div>
           <p className="mt-12 text-blue-300 font-black text-xs uppercase tracking-[0.3em]">
             Based in Texas • Serving Nationwide
           </p>
         </div>
-        {/* Decorative circle */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/10 rounded-full pointer-events-none" />
       </section>
     </div>

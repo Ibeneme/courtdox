@@ -92,9 +92,10 @@ const HowItWorks: React.FC = () => {
             <h2 className="text-6xl lg:text-[5.5rem] font-black leading-[0.9] tracking-tighter mb-8 ">
               How It <span className="text-blue-600">Works.</span>
             </h2>
+            {/* UPDATED COPY BELOW */}
             <p className="text-xl text-slate-500 font-bold leading-relaxed">
               Transforming your dispute into professional, court-ready
-              litigation in four strategic steps.
+              litigation documents in four strategic steps.
             </p>
           </motion.div>
           <motion.div
