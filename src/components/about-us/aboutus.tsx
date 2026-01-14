@@ -131,13 +131,9 @@ const AboutUs: React.FC = () => {
                 </h2>
                 <div className="h-2 w-24 bg-slate-950 rounded-full" />
               </div>
-
-              {/* UPDATED COPY BELOW */}
               <p className="text-2xl text-slate-600 leading-relaxed font-bold">
-                Access to justice shouldn't be a luxury. CourtDox is
-                democratizing the courtroom by making professional litigation
-                affordable, accessible, and understandable for small businesses
-                and individuals.
+                By making professional litigation documents affordable,
+                accessible, and easy to obtain.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 pt-4">
@@ -188,7 +184,7 @@ const AboutUs: React.FC = () => {
       {/* --- SECTION 4: FOOTER NOTE --- */}
       <div className="py-12 border-t border-slate-100 text-center">
         <p className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400 ">
-          Texas Rooted • Nationwide Reach • Attorney Driven
+          Nationwide Reach • Attorney Driven
         </p>
       </div>
     </div>
